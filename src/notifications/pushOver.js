@@ -10,6 +10,7 @@ function pushOverMessage(msg) {
     const urlencoded = new URLSearchParams();
     urlencoded.append("token", api_key);
     urlencoded.append("user", user_key);
+    urlencoded.append("html", 1);
     urlencoded.append("message", msg.toString());
     fetch(server+endpoint,
     {

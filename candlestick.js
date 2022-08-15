@@ -2,8 +2,8 @@
 
 import fs from "fs"
 
-
-const trackedCoins = ['YFII','YFI','ENS','CEL','OMG','SCRT','EGLD','RSR','AR'] //
+//'BTC','ETH','SOL','MATIC','ETC','AVAX','BNB','APE','ADA','XRP','GMT','AAVE','DOT','LINK','CRV','FTM','NEAR','SAND','AXS','GALA','LOOKS','RUNE','FTT','DYDX','DOGE','SNX','WAVESE','TRX','EOS','SUSHI','UNI','FIL','ALGO','FIDA','SRM','ICP','RAY','COMP','THEATA','ZEC','MANA','VET','PREP','1INCH','XTZ','PEOPLE','MKR','XLM','BSV','ZIL','KNC','DENT','YFII','YFI','ENS','CEL','OMG','SCRT','EGLD','RSR','AR'
+const trackedCoins = ['XTZ'] //
 //'BTC','ETH','SOL','MATIC','ETC'
 //'AVAX','BNB','APE','ADA'
 //'XRP','GMT','AAVE','DOT','LINK'
@@ -39,7 +39,8 @@ const chartResolution = 86400
             let formatDate = new Date(timestamp)
             let newMonth = (formatDate.getMonth()+1).toString().padStart(2,'0')
             let  newDay = formatDate.getDate().toString().padStart(2,'0')
-            CSVdata += `${formatDate.getFullYear()}-${newMonth}-${newDay},${open},${high},${low},${close},${close},${volume}`
+            CSVdata += `${timestamp},${open},${high},${low},${close},${close},${volume}`
+            //CSVdata += `${formatDate.getFullYear()}-${newMonth}-${newDay},${open},${high},${low},${close},${close},${volume}`
             CSVdata += "\n"
          }
    console.log(CSVdata)
